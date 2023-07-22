@@ -27,7 +27,7 @@ const columns = [
 
 
 
-const Page2 = () => {
+const Component2 = () => {
   const [data,setData] = useState([]);
   
   const getData = () =>{
@@ -64,4 +64,4 @@ const Page2 = () => {
   )
 }
 
-export default Page2
+export default Component2;

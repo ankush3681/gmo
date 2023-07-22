@@ -1,12 +1,16 @@
 import { Box, Button, FormControl, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../Routes/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const Page1 = () => {
+const Component1 = () => {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
+  const {Login} = useContext(AuthContext);
   const navigate = useNavigate();
+
+
 
   const handleSubmit = () => {
     let obj = {
@@ -22,7 +26,11 @@ const Page1 = () => {
     setEmail("");
 
     localStorage.setItem("userDetail", JSON.stringify(obj));
-    navigate("/page2");
+    // localStorage.setItem("isAuth",true)
+    Login();
+    alert("login success")
+    
+    navigate("/dashboard");
   };
 
   const isFormValid = name.trim() !== "" && mobile.trim() !== "" && email.trim() !== "";
@@ -83,4 +91,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
+export default Component1;

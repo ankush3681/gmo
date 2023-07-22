@@ -16,10 +16,7 @@ const Navbar = () => {
         <Link to="/">Register</Link>
       </Typography>
       <Typography variant="body1" fontSize="medium" fontWeight={"bold"}>
-        <Link to="/page2">Page2</Link>
-      </Typography>
-      <Typography variant="body1" fontSize="medium" fontWeight={"bold"}>
-        <Link to="/page3">Page3</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </Typography>
     </Box>
   );
